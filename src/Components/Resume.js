@@ -14,7 +14,6 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const skillmessage = this.props.data.skillmessage;
     const education = this.props.data.education.map(function (education) {
       return (
         <div key={education.school}>
@@ -36,20 +35,24 @@ class Resume extends Component {
             {work.title}
             <span>&bull;</span> <em className="date">{work.years}</em>
           </p>
-          <p>{work.description}</p>
+          <ul>
+            <li>- {work.description}</li>
+            <li>- {work.description2}</li>
+            <li>- {work.description3}</li>
+          </ul>
         </div>
       );
     });
 
     const skills = this.props.data.skills.map((skills) => {
-      const backgroundColor = this.getRandomColor();
-      const className = "bar-expand " + skills.name.toLowerCase();
-      const width = skills.level;
+      // const backgroundColor = this.getRandomColor();
+      // const className = "bar-expand " + skills.name.toLowerCase();
+      // const width = skills.level;
 
       return (
-        <li key={skills.name}>
-          <span style={{ width, backgroundColor }} className={className}></span>
-          <em>{skills.name}</em>
+        <li key={skills.skills}>
+          {/* <span style={{ width, backgroundColor }} className={className}></span> */}
+          <em>{skills.skills}</em>
         </li>
       );
     });
@@ -93,11 +96,7 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              <p>{skillmessage}</p>
-
-              <div className="bars">
-                <ul className="skills">{skills}</ul>
-              </div>
+              <ul className="skills">{skills}</ul>
             </div>
           </div>
         </Slide>
