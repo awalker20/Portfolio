@@ -41,12 +41,6 @@ class Header extends Component {
                 Resume
               </a>
             </li>
-
-            <li>
-              <a className="smoothscroll" href="#portfolio">
-                Projects
-              </a>
-            </li>
           </ul>
         </nav>
 
@@ -66,6 +60,9 @@ class Header extends Component {
                 </a> */}
                 <a href={github} className="button btn github-btn">
                   <i className="fa fa-github"></i>Github
+                </a>
+                <a href={github} className="button btn linkedin-btn">
+                  <i className="fa fa-linkedin"></i>LinkedIn
                 </a>
               </ul>
             </Fade>
