@@ -67,9 +67,6 @@ class Header extends Component {
                 <a href={github} className="button btn github-btn">
                   <i className="fa fa-github"></i>Github
                 </a>
-                <a href={linkedin} className="button btn linkedin-btn">
-                  <i className="fa fa-linkedin"></i>LinkedIn
-                </a>
               </ul>
             </Fade>
           </div>
